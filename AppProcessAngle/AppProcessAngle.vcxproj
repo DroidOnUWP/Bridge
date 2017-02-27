@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{fd085efc-de70-41a4-9145-a0dfc65cc31f}</ProjectGuid>
+    <RootNamespace>AppProcessAngle</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="ANGLE">
+    <AngleIncPath Condition=" '$(AngleIncPath)' == '' ">$(AngleRootPath)\include\</AngleIncPath>
+    <AngleBinPath Condition=" '$(AngleBinPath)' == '' ">$(AngleRootPath)\winrt\10\src\$(Configuration)_$(Platform)\</AngleBinPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>AppProcessAngle_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>AppProcess</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>AppProcess</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>AppProcess</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <TargetName>AppProcess</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>AppProcess</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>AppProcess</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='ARM'">
+    <Link>
+      <AdditionalDependencies>$(AngleBinPath)lib\libGLESv2.lib; $(AngleBinPath)lib\libEGL.lib; mincore.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\arm; $(VCInstallDir)\lib\arm</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
+    <Link>
+      <AdditionalDependencies>$(AngleBinPath)lib\libGLESv2.lib; $(AngleBinPath)lib\libEGL.lib; mincore.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store; $(VCInstallDir)\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64'">
+    <Link>
+      <AdditionalDependencies>$(AngleBinPath)lib\libGLESv2.lib; $(AngleBinPath)lib\libEGL.lib; mincore.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\BridgeLib\include\android\;$(AngleIncPath);$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <StackReserveSize Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4194304</StackReserveSize>
+      <StackCommitSize Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4194304</StackCommitSize>
+      <LargeAddressAware Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LargeAddressAware>
+    </Link>
+    <Link>
+      <StackReserveSize Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4194304</StackReserveSize>
+      <StackCommitSize Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4194304</StackCommitSize>
+      <LargeAddressAware Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</LargeAddressAware>
+    </Link>
+    <Link>
+      <StackReserveSize Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4194304</StackReserveSize>
+      <StackCommitSize Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4194304</StackCommitSize>
+      <LargeAddressAware Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\BridgeLib\include\android\;$(AngleIncPath);$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <StackReserveSize Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4194304</StackReserveSize>
+      <StackCommitSize Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4194304</StackCommitSize>
+      <LargeAddressAware Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LargeAddressAware>
+    </Link>
+    <Link>
+      <StackReserveSize Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4194304</StackReserveSize>
+      <StackCommitSize Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4194304</StackCommitSize>
+      <LargeAddressAware Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</LargeAddressAware>
+    </Link>
+    <Link>
+      <StackReserveSize Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4194304</StackReserveSize>
+      <StackCommitSize Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4194304</StackCommitSize>
+      <LargeAddressAware Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\SplashScreen.scale-200.png" />
+    <Image Include="Assets\Square150x150Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="SimpleRenderer.h" />
+    <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="WinDebugMonitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="SimpleRenderer.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WinDebugMonitor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="..\android\lib\ARM\app_process32.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\dex2oat.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libandroid.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libandroidfw.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libandroid_runtime.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libart-compiler.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libart.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libaudioutils.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libbacktrace.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libbase.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libbcinfo.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libbinary_parse.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libbinder.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libc++.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libc.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libcamera_client.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libcamera_metadata.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libcrypto.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libcutils.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libdng_sdk.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libdrmframework.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libexpat.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libft2.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libGLESv1_CM.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libgui.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libhardware.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libhardware_legacy.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libharfbuzz_ng.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libhwui.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libicui18n.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libicuuc.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libimage_type_recognition.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libimg_utils.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libinput.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libjavacore.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libjnigraphics.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libjpeg.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libLLVM.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\liblog.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\liblz4.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\liblzma.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libm.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libmedia.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libmediandk.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libmediautils.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libmemtrack.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libmemunreachable.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libminikin.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libnativebridge.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libnativehelper.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libnativeloader.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libnetd_client.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libnetutils.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libopenjdk.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libopenjdkjvm.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libOpenMAXAL.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libOpenSLES.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libpackagelistparser.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libpcre.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libpdfium.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libpiex.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libpng.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libpowermanager.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libprotobuf-cpp-lite.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libradio.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libradio_metadata.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libRS.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libRScpp.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libRS_internal.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libselinux.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libskia.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libsonivox.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libsoundtrigger.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libspeexresampler.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libsqlite.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libstagefright.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libstagefright_foundation.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libstagefright_http_support.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libstdc++.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libsync.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libtest_syscalls.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libtiff_directory.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libui.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libunwind.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libusbhost.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libutils.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libvixl.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libvulkan.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libwebviewchromium_plat_support.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libwilhelm.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\libz.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\linker.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\android\lib\ARM\patchoat.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="AppProcessAngle_TemporaryKey.pfx" />
+    <None Include="root\property_contexts">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\app\EasterEgg\EasterEgg.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\build.prop">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\etc\compiled-classes">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\etc\event-log-tags">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\etc\preloaded-classes">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\fonts\NotoSansCJK-Regular.ttc">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\am.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\android.test.runner.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\apache-xml.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\appwidget.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-apache-xml.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-apache-xml.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-bouncycastle.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-bouncycastle.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-conscrypt.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-conscrypt.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-junit.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-junit.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-libart.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-libart.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-ext.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-ext.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-framework.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-framework.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-ims-common.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-ims-common.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-okhttp.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-okhttp.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-telephony-common.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-telephony-common.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-voip-common.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot-voip-common.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot.art">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\arm\boot.oat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\bmgr.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\bouncycastle.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\bu.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\com.android.future.usb.accessory.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\com.android.location.provider.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\com.android.media.remotedisplay.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\com.android.mediadrm.signer.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\conscrypt.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\content.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\core-junit.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\core-libart.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\core-oj.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\dpm.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\ethernet-service.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\ext.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\framework-res.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\framework.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\hid.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\ime.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\ims-common.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\input.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\javax.obex.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\media_cmd.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\monkey.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\okhttp.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\org.apache.http.legacy.boot.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\pm.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\requestsync.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\services.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\settings.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\sm.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\svc.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\telecom.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\telephony-common.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\uiautomator.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\voip-common.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\wifi-service.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\framework\wm.jar">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\BackupRestoreConfirmation\BackupRestoreConfirmation.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\BlockedNumberProvider\BlockedNumberProvider.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\CalendarProvider\CalendarProvider.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\ContactsProvider\ContactsProvider.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\Contacts\Contacts.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\CtsShimPrivPrebuilt\CtsShimPrivPrebuilt.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\DefaultContainerService\DefaultContainerService.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\DownloadProvider\DownloadProvider.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\InputDevices\InputDevices.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\Launcher2\Launcher2.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\PackageInstaller\PackageInstaller.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\SettingsProvider\SettingsProvider.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\Settings\Settings.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\Shell\Shell.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\StorageManager\StorageManager.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\priv-app\SystemUI\SystemUI.apk">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\usr\icu\icudt56l.dat">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="root\system\usr\share\zoneinfo\tzdata">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="ANGLE">
+    <None Include="$(AngleBinPath)libEGL.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(AngleBinPath)libGLESv2.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BridgeLib\BridgeLib.vcxproj">
+      <Project>{a9739085-6a90-4f28-9883-645f97be59e2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ProcessHost\ProcessHost.vcxproj">
+      <Project>{73128e2a-8bf8-4e22-96ff-5ac6e6926e7d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="root\system\etc\public.libraries.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="root\system\etc\fonts.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="root\system\fonts\AndroidClock.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\CarroisGothicSC-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\ComingSoon.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\CutiveMono.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\DancingScript-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\DancingScript-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\DroidSansMono.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoColorEmoji.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoNaskhArabic-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoNaskhArabic-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoNaskhArabicUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoNaskhArabicUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansArmenian-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansArmenian-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBalinese-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBamum-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBatak-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBengali-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBengali-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBengaliUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBengaliUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBuginese-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansBuhid-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansCanadianAboriginal-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansCham-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansCham-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansCherokee-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansCoptic-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansDevanagari-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansDevanagari-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansDevanagariUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansDevanagariUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansEthiopic-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansEthiopic-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGeorgian-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGeorgian-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGlagolitic-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGujarati-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGujarati-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGujaratiUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGujaratiUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGurmukhi-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGurmukhi-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGurmukhiUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansGurmukhiUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansHanunoo-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansHebrew-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansHebrew-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansJavanese-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKannada-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKannada-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKannadaUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKannadaUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKayahLi-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKhmer-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKhmer-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKhmerUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansKhmerUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLao-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLao-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLaoUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLaoUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLepcha-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLimbu-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansLisu-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMalayalam-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMalayalam-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMalayalamUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMalayalamUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMandaic-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMeeteiMayek-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMongolian-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMyanmar-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMyanmar-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMyanmarUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansMyanmarUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansNewTaiLue-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansNKo-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansOlChiki-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansOriya-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansOriya-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansOriyaUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansOriyaUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansRejang-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSaurashtra-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSinhala-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSinhala-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSundanese-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSylotiNagri-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSymbols-Regular-Subsetted.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSymbols-Regular-Subsetted2.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansSyriacEstrangela-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTagbanwa-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTaiLe-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTaiTham-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTaiViet-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTamil-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTamil-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTamilUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTamilUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTelugu-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTelugu-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTeluguUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTeluguUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansThaana-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansThaana-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansThai-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansThai-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansThaiUI-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansThaiUI-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTibetan-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTibetan-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansTifinagh-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansVai-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSansYi-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSerif-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSerif-BoldItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSerif-Italic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\NotoSerif-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Black.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-BlackItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-BoldItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Italic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Light.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-LightItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Medium.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-MediumItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-Thin.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\Roboto-ThinItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\RobotoCondensed-Bold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\RobotoCondensed-BoldItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\RobotoCondensed-Italic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\RobotoCondensed-Light.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\RobotoCondensed-LightItalic.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="root\system\fonts\RobotoCondensed-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

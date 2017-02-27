@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>005f5de9-f76e-4424-a2df-a22b0a8b71f8</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Binaries">
+      <Extensions>dll;</Extensions>
+    </Filter>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="AndroidRuntime">
+      <UniqueIdentifier>{91ca9e56-428e-477e-8244-96e8b15792a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="root\system">
+      <UniqueIdentifier>{09596954-67e5-42bc-8c49-931222328dde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="root\root\system\framework">
+      <UniqueIdentifier>{90e9ef3f-eb00-458f-ac06-34fe2985bafa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="root\root\system\framework\arm">
+      <UniqueIdentifier>{a67316a3-e18c-4412-93ce-9cba74aa6285}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="SimpleRenderer.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="WinDebugMonitor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="SimpleRenderer.h" />
+    <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="WinDebugMonitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AppProcessAngle_TemporaryKey.pfx" />
+    <None Include="$(AngleBinPath)libEGL.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="$(AngleBinPath)libGLESv2.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\build.prop">
+      <Filter>system</Filter>
+    </None>
+    <None Include="root\system\etc\preloaded-classes" />
+    <None Include="..\android\lib\ARM\app_process32.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libandroidfw.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libandroid_runtime.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libart.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libaudioutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libbacktrace.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libbase.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libbinder.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libc++.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libc.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libcamera_client.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libcamera_metadata.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libcutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libexpat.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libft2.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libGLESv1_CM.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libgui.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libhardware.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libhardware_legacy.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libharfbuzz_ng.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libhwui.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libicui18n.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libicuuc.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libimg_utils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libinput.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libjpeg.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\liblog.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libm.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libmedia.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libmemtrack.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libminikin.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libnativebridge.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libnativehelper.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libnetd_client.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libnetutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libpcre.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libpdfium.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libpng.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libpowermanager.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libradio.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libradio_metadata.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libRScpp.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libselinux.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libskia.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libsonivox.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libsoundtrigger.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libspeexresampler.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libsqlite.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libstagefright.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libstagefright_foundation.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libsync.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libui.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libunwind.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libusbhost.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libz.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libmemunreachable.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libnativeloader.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libvulkan.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libprotobuf-cpp-lite.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libcrypto.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libpackagelistparser.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libdng_sdk.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libpiex.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\property_contexts" />
+    <None Include="..\android\lib\ARM\libbinary_parse.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libimage_type_recognition.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libtiff_directory.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\liblzma.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\liblz4.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\etc\compiled-classes" />
+    <None Include="root\system\framework\bu.jar" />
+    <None Include="root\system\framework\ext.jar" />
+    <None Include="root\system\framework\pm.jar" />
+    <None Include="root\system\framework\wm.jar" />
+    <None Include="..\android\lib\ARM\libandroid.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libjnigraphics.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libmediandk.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libstdc++.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libRS.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libOpenSLES.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libRS_internal.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libwilhelm.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libOpenMAXAL.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libdrmframework.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libmediautils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libbcinfo.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libLLVM.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libstagefright_http_support.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libwebviewchromium_plat_support.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\etc\event-log-tags" />
+    <None Include="..\android\lib\ARM\patchoat.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-bouncycastle.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-bouncycastle.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-apache-xml.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-apache-xml.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-conscrypt.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-conscrypt.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-junit.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-junit.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-libart.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-core-libart.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\appwidget.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\bmgr.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\android.test.runner.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\apache-xml.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\am.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-ext.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-ext.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-framework.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-framework.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-ims-common.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-ims-common.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-okhttp.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-okhttp.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-telephony-common.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-telephony-common.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-voip-common.art">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\arm\boot-voip-common.oat">
+      <Filter>root\system\framework\arm</Filter>
+    </None>
+    <None Include="root\system\framework\com.android.future.usb.accessory.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\com.android.location.provider.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\com.android.media.remotedisplay.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\com.android.mediadrm.signer.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\conscrypt.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\content.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\core-junit.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\core-libart.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\core-oj.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\dpm.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\ethernet-service.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\wifi-service.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\sm.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\svc.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\telecom.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\telephony-common.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\uiautomator.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\voip-common.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\settings.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\services.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\requestsync.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\framework.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\framework-res.apk">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\hid.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\ime.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\ims-common.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\input.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\javax.obex.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\media_cmd.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\monkey.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\okhttp.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\org.apache.http.legacy.boot.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="root\system\framework\bouncycastle.jar">
+      <Filter>root\system\framework</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libtest_syscalls.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\linker.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libjavacore.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\usr\icu\icudt56l.dat" />
+    <None Include="..\android\lib\ARM\libopenjdk.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libopenjdkjvm.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\usr\share\zoneinfo\tzdata" />
+    <None Include="root\system\fonts\NotoSansCJK-Regular.ttc" />
+    <None Include="root\system\priv-app\BackupRestoreConfirmation\BackupRestoreConfirmation.apk" />
+    <None Include="root\system\priv-app\BlockedNumberProvider\BlockedNumberProvider.apk" />
+    <None Include="root\system\priv-app\DefaultContainerService\DefaultContainerService.apk" />
+    <None Include="root\system\priv-app\CtsShimPrivPrebuilt\CtsShimPrivPrebuilt.apk" />
+    <None Include="root\system\priv-app\ContactsProvider\ContactsProvider.apk" />
+    <None Include="root\system\priv-app\Contacts\Contacts.apk" />
+    <None Include="root\system\priv-app\CalendarProvider\CalendarProvider.apk" />
+    <None Include="root\system\priv-app\SystemUI\SystemUI.apk" />
+    <None Include="root\system\priv-app\Settings\Settings.apk" />
+    <None Include="root\system\priv-app\SettingsProvider\SettingsProvider.apk" />
+    <None Include="root\system\priv-app\Shell\Shell.apk" />
+    <None Include="root\system\priv-app\StorageManager\StorageManager.apk" />
+    <None Include="root\system\priv-app\PackageInstaller\PackageInstaller.apk" />
+    <None Include="root\system\priv-app\Launcher2\Launcher2.apk" />
+    <None Include="root\system\priv-app\DownloadProvider\DownloadProvider.apk" />
+    <None Include="root\system\priv-app\InputDevices\InputDevices.apk" />
+    <None Include="..\android\lib\ARM\dex2oat.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libart-compiler.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\ARM\libvixl.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="root\system\app\EasterEgg\EasterEgg.apk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="root\system\etc\public.libraries.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="root\system\etc\fonts.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="root\system\fonts\AndroidClock.ttf" />
+    <Font Include="root\system\fonts\CarroisGothicSC-Regular.ttf" />
+    <Font Include="root\system\fonts\ComingSoon.ttf" />
+    <Font Include="root\system\fonts\CutiveMono.ttf" />
+    <Font Include="root\system\fonts\DancingScript-Bold.ttf" />
+    <Font Include="root\system\fonts\DancingScript-Regular.ttf" />
+    <Font Include="root\system\fonts\DroidSansMono.ttf" />
+    <Font Include="root\system\fonts\NotoColorEmoji.ttf" />
+    <Font Include="root\system\fonts\NotoNaskhArabic-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoNaskhArabic-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoNaskhArabicUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoNaskhArabicUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansArmenian-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansArmenian-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBalinese-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBamum-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBatak-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBengali-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansBengali-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBengaliUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansBengaliUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBuginese-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansBuhid-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansCanadianAboriginal-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansCoptic-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansDevanagari-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansDevanagari-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansDevanagariUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansDevanagariUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansEthiopic-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansEthiopic-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansGeorgian-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansGeorgian-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansGlagolitic-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansGujarati-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansGujarati-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansGujaratiUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansGujaratiUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansGurmukhi-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansGurmukhi-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansGurmukhiUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansGurmukhiUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansHanunoo-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansHebrew-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansHebrew-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansCham-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansCham-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansCherokee-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansJavanese-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansKannada-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansKannada-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansKannadaUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansKannadaUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansKayahLi-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansKhmer-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansKhmer-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansKhmerUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansKhmerUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansLao-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansLao-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansLaoUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansLaoUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansLepcha-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansLimbu-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansLisu-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMalayalam-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansMalayalam-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMalayalamUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansMalayalamUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMandaic-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMeeteiMayek-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMongolian-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMyanmar-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansMyanmar-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansMyanmarUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansMyanmarUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansNewTaiLue-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansNKo-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansOlChiki-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansOriya-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansOriya-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansOriyaUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansOriyaUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansRejang-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansSaurashtra-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansSinhala-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansSinhala-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansSundanese-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansSylotiNagri-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansSymbols-Regular-Subsetted.ttf" />
+    <Font Include="root\system\fonts\NotoSansSymbols-Regular-Subsetted2.ttf" />
+    <Font Include="root\system\fonts\NotoSansSyriacEstrangela-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTagbanwa-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTaiLe-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTaiTham-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTaiViet-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTamil-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansTamil-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTamilUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansTamilUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTelugu-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansTelugu-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTeluguUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansTeluguUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansThaana-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansThaana-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansThai-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansThai-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansThaiUI-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansThaiUI-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTibetan-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSansTibetan-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansTifinagh-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansVai-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSansYi-Regular.ttf" />
+    <Font Include="root\system\fonts\NotoSerif-Bold.ttf" />
+    <Font Include="root\system\fonts\NotoSerif-BoldItalic.ttf" />
+    <Font Include="root\system\fonts\NotoSerif-Italic.ttf" />
+    <Font Include="root\system\fonts\NotoSerif-Regular.ttf" />
+    <Font Include="root\system\fonts\Roboto-Black.ttf" />
+    <Font Include="root\system\fonts\Roboto-BlackItalic.ttf" />
+    <Font Include="root\system\fonts\Roboto-Bold.ttf" />
+    <Font Include="root\system\fonts\Roboto-BoldItalic.ttf" />
+    <Font Include="root\system\fonts\RobotoCondensed-Bold.ttf" />
+    <Font Include="root\system\fonts\RobotoCondensed-BoldItalic.ttf" />
+    <Font Include="root\system\fonts\RobotoCondensed-Italic.ttf" />
+    <Font Include="root\system\fonts\RobotoCondensed-Light.ttf" />
+    <Font Include="root\system\fonts\RobotoCondensed-LightItalic.ttf" />
+    <Font Include="root\system\fonts\RobotoCondensed-Regular.ttf" />
+    <Font Include="root\system\fonts\Roboto-Italic.ttf" />
+    <Font Include="root\system\fonts\Roboto-Light.ttf" />
+    <Font Include="root\system\fonts\Roboto-LightItalic.ttf" />
+    <Font Include="root\system\fonts\Roboto-Medium.ttf" />
+    <Font Include="root\system\fonts\Roboto-MediumItalic.ttf" />
+    <Font Include="root\system\fonts\Roboto-Regular.ttf" />
+    <Font Include="root\system\fonts\Roboto-Thin.ttf" />
+    <Font Include="root\system\fonts\Roboto-ThinItalic.ttf" />
+  </ItemGroup>
+</Project>

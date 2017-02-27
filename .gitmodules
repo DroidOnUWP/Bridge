@@ -1,0 +1,17 @@
+[submodule "FLinux"]
+	path = FLinux
+	url = https://github.com/DroidOnUWP/flinux.git
+[submodule "Angle"]
+	path = Angle
+	url = https://github.com/Microsoft/angle.git
+[submodule "Android/lib"]
+	path = Android/lib
+	url = https://github.com/DroidOnUWP/AndroidLibs.git
+	branch = 7.1.1
+[submodule "AppProcessAngle/root"]
+	path = AppProcessAngle/root
+	url = https://github.com/DroidOnUWP/AndroidImage.git
+	branch = 7.1.1
+[submodule "BridgeLib"]
+	path = BridgeLib
+	url = https://github.com/DroidOnUWP/BridgeLib.git
