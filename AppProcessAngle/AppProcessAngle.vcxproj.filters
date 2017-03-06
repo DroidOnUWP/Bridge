@@ -29,15 +29,6 @@
     <Filter Include="AndroidRuntime">
       <UniqueIdentifier>{91ca9e56-428e-477e-8244-96e8b15792a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="root\system">
-      <UniqueIdentifier>{09596954-67e5-42bc-8c49-931222328dde}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="root\root\system\framework">
-      <UniqueIdentifier>{90e9ef3f-eb00-458f-ac06-34fe2985bafa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="root\root\system\framework\arm">
-      <UniqueIdentifier>{a67316a3-e18c-4412-93ce-9cba74aa6285}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
@@ -67,9 +58,6 @@
     </None>
     <None Include="$(AngleBinPath)libGLESv2.dll">
       <Filter>Binaries</Filter>
-    </None>
-    <None Include="root\system\build.prop">
-      <Filter>system</Filter>
     </None>
     <None Include="root\system\etc\preloaded-classes" />
     <None Include="..\android\lib\ARM\app_process32.dll">
@@ -334,198 +322,6 @@
     <None Include="..\android\lib\ARM\patchoat.dll">
       <Filter>Binaries</Filter>
     </None>
-    <None Include="root\system\framework\arm\boot.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-bouncycastle.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-bouncycastle.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-apache-xml.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-apache-xml.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-conscrypt.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-conscrypt.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-core-junit.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-core-junit.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-core-libart.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-core-libart.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\appwidget.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\bmgr.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\android.test.runner.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\apache-xml.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\am.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-ext.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-ext.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-framework.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-framework.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-ims-common.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-ims-common.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-okhttp.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-okhttp.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-telephony-common.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-telephony-common.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-voip-common.art">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\arm\boot-voip-common.oat">
-      <Filter>root\system\framework\arm</Filter>
-    </None>
-    <None Include="root\system\framework\com.android.future.usb.accessory.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\com.android.location.provider.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\com.android.media.remotedisplay.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\com.android.mediadrm.signer.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\conscrypt.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\content.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\core-junit.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\core-libart.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\core-oj.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\dpm.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\ethernet-service.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\wifi-service.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\sm.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\svc.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\telecom.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\telephony-common.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\uiautomator.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\voip-common.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\settings.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\services.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\requestsync.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\framework.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\framework-res.apk">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\hid.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\ime.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\ims-common.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\input.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\javax.obex.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\media_cmd.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\monkey.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\okhttp.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\org.apache.http.legacy.boot.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
-    <None Include="root\system\framework\bouncycastle.jar">
-      <Filter>root\system\framework</Filter>
-    </None>
     <None Include="..\android\lib\ARM\libtest_syscalls.dll">
       <Filter>Binaries</Filter>
     </None>
@@ -570,6 +366,350 @@
       <Filter>Binaries</Filter>
     </None>
     <None Include="root\system\app\EasterEgg\EasterEgg.apk" />
+    <None Include="root\system\build.prop" />
+    <None Include="root\system\framework\am.jar" />
+    <None Include="root\system\framework\android.test.runner.jar" />
+    <None Include="root\system\framework\apache-xml.jar" />
+    <None Include="root\system\framework\appwidget.jar" />
+    <None Include="root\system\framework\arm\boot-apache-xml.art" />
+    <None Include="root\system\framework\arm\boot-apache-xml.oat" />
+    <None Include="root\system\framework\arm\boot-bouncycastle.art" />
+    <None Include="root\system\framework\arm\boot-bouncycastle.oat" />
+    <None Include="root\system\framework\arm\boot-conscrypt.art" />
+    <None Include="root\system\framework\arm\boot-conscrypt.oat" />
+    <None Include="root\system\framework\arm\boot-core-junit.art" />
+    <None Include="root\system\framework\arm\boot-core-junit.oat" />
+    <None Include="root\system\framework\arm\boot-core-libart.art" />
+    <None Include="root\system\framework\arm\boot-core-libart.oat" />
+    <None Include="root\system\framework\arm\boot-ext.art" />
+    <None Include="root\system\framework\arm\boot-ext.oat" />
+    <None Include="root\system\framework\arm\boot-framework.art" />
+    <None Include="root\system\framework\arm\boot-framework.oat" />
+    <None Include="root\system\framework\arm\boot-ims-common.art" />
+    <None Include="root\system\framework\arm\boot-ims-common.oat" />
+    <None Include="root\system\framework\arm\boot-okhttp.art" />
+    <None Include="root\system\framework\arm\boot-okhttp.oat" />
+    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.art" />
+    <None Include="root\system\framework\arm\boot-org.apache.http.legacy.boot.oat" />
+    <None Include="root\system\framework\arm\boot-telephony-common.art" />
+    <None Include="root\system\framework\arm\boot-telephony-common.oat" />
+    <None Include="root\system\framework\arm\boot-voip-common.art" />
+    <None Include="root\system\framework\arm\boot-voip-common.oat" />
+    <None Include="root\system\framework\arm\boot.art" />
+    <None Include="root\system\framework\arm\boot.oat" />
+    <None Include="root\system\framework\bmgr.jar" />
+    <None Include="root\system\framework\bouncycastle.jar" />
+    <None Include="root\system\framework\com.android.future.usb.accessory.jar" />
+    <None Include="root\system\framework\com.android.location.provider.jar" />
+    <None Include="root\system\framework\com.android.media.remotedisplay.jar" />
+    <None Include="root\system\framework\com.android.mediadrm.signer.jar" />
+    <None Include="root\system\framework\conscrypt.jar" />
+    <None Include="root\system\framework\content.jar" />
+    <None Include="root\system\framework\core-junit.jar" />
+    <None Include="root\system\framework\core-libart.jar" />
+    <None Include="root\system\framework\core-oj.jar" />
+    <None Include="root\system\framework\dpm.jar" />
+    <None Include="root\system\framework\ethernet-service.jar" />
+    <None Include="root\system\framework\framework-res.apk" />
+    <None Include="root\system\framework\framework.jar" />
+    <None Include="root\system\framework\hid.jar" />
+    <None Include="root\system\framework\ime.jar" />
+    <None Include="root\system\framework\ims-common.jar" />
+    <None Include="root\system\framework\input.jar" />
+    <None Include="root\system\framework\javax.obex.jar" />
+    <None Include="root\system\framework\media_cmd.jar" />
+    <None Include="root\system\framework\monkey.jar" />
+    <None Include="root\system\framework\okhttp.jar" />
+    <None Include="root\system\framework\org.apache.http.legacy.boot.jar" />
+    <None Include="root\system\framework\requestsync.jar" />
+    <None Include="root\system\framework\services.jar" />
+    <None Include="root\system\framework\settings.jar" />
+    <None Include="root\system\framework\sm.jar" />
+    <None Include="root\system\framework\svc.jar" />
+    <None Include="root\system\framework\telecom.jar" />
+    <None Include="root\system\framework\telephony-common.jar" />
+    <None Include="root\system\framework\uiautomator.jar" />
+    <None Include="root\system\framework\voip-common.jar" />
+    <None Include="root\system\framework\wifi-service.jar" />
+    <None Include="..\android\lib\x86\app_process32.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\dex2oat.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libandroid.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libandroidfw.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libandroid_runtime.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libart-compiler.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libart.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libaudioutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libbacktrace.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libbase.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libbcinfo.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libbinary_parse.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libbinder.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libc++.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libc.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libcamera_client.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libcamera_metadata.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libcrypto.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libcutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libdng_sdk.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libdrmframework.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libexpat.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libft2.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libGLESv1_CM.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libgui.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libhardware.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libhardware_legacy.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libharfbuzz_ng.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libhwui.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libicui18n.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libicuuc.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libimage_type_recognition.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libimg_utils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libinput.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libjavacore.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libjnigraphics.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libjpeg.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libLLVM.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\liblog.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\liblz4.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\liblzma.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libm.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libmedia.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libmediandk.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libmediautils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libmemtrack.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libmemunreachable.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libminikin.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libnativebridge.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libnativehelper.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libnativeloader.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libnetd_client.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libnetutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libopenjdk.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libopenjdkjvm.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libOpenMAXAL.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libOpenSLES.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libpackagelistparser.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libpcre.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libpdfium.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libpiex.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libpng.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libpowermanager.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libprotobuf-cpp-lite.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libradio.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libradio_metadata.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libRS.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libRScpp.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libRS_internal.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libselinux.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libskia.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libsonivox.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libsoundtrigger.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libspeexresampler.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libsqlite.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libstagefright.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libstagefright_foundation.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libstagefright_http_support.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libstdc++.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libsync.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libtiff_directory.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libui.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libunwind.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libusbhost.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libutils.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libvixl.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libvulkan.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libwebviewchromium_plat_support.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libwilhelm.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\libz.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\linker.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\android\lib\x86\patchoat.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="..\Android\lib\X86\libprocessgroup.dll">
+      <Filter>Binaries</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="root\system\etc\public.libraries.txt" />
