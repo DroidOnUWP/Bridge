@@ -16,6 +16,27 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <AppxManifest Include="..\AppProcessAngle\Package.appxmanifest" />
+    <Image Include="Assets\SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AppProcessAngle_TemporaryKey.pfx" />
+    <None Include="ProcessHost_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
 </Project>

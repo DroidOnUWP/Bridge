@@ -1,0 +1,30 @@
+version: 1.0.{build}
+image: Visual Studio 2015
+configuration:
+- Debug
+- Release
+platform:
+- x86
+- ARM
+environment:
+  AngleRootPath: '%APPVEYOR_BUILD_FOLDER%\angle'
+install:
+- cmd: >-
+    git submodule update --init --recursive
+    
+    set
+before_build:
+- cmd:  >-
+    SET ANGLE_PLATFORM=%Platform%
+
+    IF %ANGLE_PLATFORM%==x86 SET ANGLE_PLATFORM=Win32
+
+    msbuild Angle\winrt\10\src\angle.sln /verbosity:minimal /p:configuration=%Configuration% /p:platform=%ANGLE_PLATFORM%
+build:
+  project: Bridge.sln
+  verbosity: minimal
+artifacts:
+- path: AppPackages\AppProcessAngle\AppProcessAngle_*\AppProcessAngle_*.appx
+  name: AppProcessAngle_appx
+- path: AppPackages\AppProcessAngle\AppProcessAngle_*\AppProcessAngle_*.appxsym
+  name: AppProcessAngle_appxsym
